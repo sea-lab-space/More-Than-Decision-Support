@@ -45,11 +45,12 @@ const affiliationLogos: Record<string, string> = {
   "University of Michigan": UMLogo,
 };
 
-const bibliography = `@article{cao2026more,
-title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
-author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
-journal={arXiv preprint arXiv:2602.14733},
-year={2026}
+const bibliography = `@inproceedings{cao2026more,
+  title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
+  author={Cao, Yancheng and Ji, Yishu and Fu, Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai},
+  booktitle={Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  pages={1--24},
+  year={2026}
 }`;
 
 export default function PubPage() {
@@ -108,9 +109,11 @@ export default function PubPage() {
             </a>
           </Button>
 
-          <Button variant="outline" disabled className="flex items-center gap-2 opacity-60 cursor-not-allowed">
-            <FileText className="w-4 h-4" />
-            ACM Digital Library (Coming Soon)
+          <Button asChild variant="outline">
+            <a href="https://dl.acm.org/doi/full/10.1145/3772318.3791946" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+              <FileText className="w-4 h-4" />
+              ACM Digital Library
+            </a>
           </Button>
         </div>
 
